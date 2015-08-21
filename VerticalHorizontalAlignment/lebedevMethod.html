@@ -1,24 +1,80 @@
 <style>
+	body {
+		position: relative;
+		font-family: Arial, sans-serif;
+	}
+
 	.viewport {
 		height: 100%;
 		background: lightcoral;
 	}
 
-	.popup {
+	.popup-wrapper {
 		position: relative;
 		left: 50%;
 		float: left;
+		outline: 2px solid red;
+	}
+
+	.popup {
+		position: relative;
+		left: -50%;
 		background: lightyellow;
 	}
 
-	.popup__inner {
-		position: relative;
-		left: -50%;
+	code {
+		font-size: 20px;
+	}
+
+	.description {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 300px;
+		color: #fff;
+		font-size: 20px;
+	}
+
+	.description__item {
+		margin-bottom: 20px;
+	}
+
+	.description__title {
+		font-weight: bold;
+		text-decoration: underline;
 	}
 </style>
 
 <div class="viewport">
-	<div class="popup">
-		<div class="popup__inner">1111</div>
+	<div class="popup-wrapper">
+		<div class="popup">
+			<code>
+				position: relative;<br>
+				left: -50%;<br>
+			</code>
+		</div>
+		<code>
+			position: relative;<br>
+			left: 50%;<br>
+			float: left;<br>
+		</code>
+	</div>
+</div>
+
+<div class="description">
+	<div class="description__item description__item_type_adv">
+		<div class="description__title">Advantages:</div>
+		<ul class="description__list">
+			<li class="description__list-item">ie7+</li>
+			<li class="description__list-item">not responsive: doesn't work with min-max width and %(must be assigned to wrapper!)</li>
+			<li class="description__list-item">no need to compensate paddings</li>
+		</ul>
+	</div>
+	<div class="description__item description__item_type_cav">
+		<div class="description__title">Caveats:</div>
+		<ul class="description__list">
+			<li class="description__list-item">nesting</li>
+			<li class="description__list-item">height must be declared</li>
+		</ul>
 	</div>
 </div>

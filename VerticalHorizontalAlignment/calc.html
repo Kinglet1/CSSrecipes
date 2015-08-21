@@ -1,21 +1,75 @@
 <style>
+	body {
+		position: relative;
+		font-family: Arial, sans-serif;
+	}
+
 	.viewport {
 		height: 100%;
 		background: lightseagreen;
 		position: relative;
-		text-align: center;
 	}
 
 	.popup {
 		width: 300px;
 		height: 300px;
 		background: lightgoldenrodyellow;
-		position: relative;
+		position: absolute;
 		top: calc(50% - 150px);  /* height/2 */
 		left: calc(50% - 150px); /* width/2 */
+	}
+
+	code {
+		font-size: 20px;
+	}
+
+	.description {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 300px;
+		color: #fff;
+		font-size: 20px;
+	}
+
+	.description__item {
+		margin-bottom: 20px;
+	}
+
+	.description__title {
+		font-weight: bold;
+		text-decoration: underline;
 	}
 </style>
 
 <div class="viewport">
-	<div class="popup"></div>
+	<code>
+		position: relative;
+	</code>
+	<div class="popup">
+		<code>
+			position: absolute;<br>
+			top: calc(50% - @height/2);
+			top: calc(50% - @width/2);
+		</code>
+	</div>
+</div>
+
+<div class="description">
+	<div class="description__item description__item_type_adv">
+		<div class="description__title">Advantages:</div>
+		<ul class="description__list">
+			<li class="description__list-item">minimal code</li>
+
+		</ul>
+	</div>
+	<div class="description__item description__item_type_cav">
+		<div class="description__title">Caveats:</div>
+		<ul class="description__list">
+			<li class="description__list-item">dimentions must be declared</li>
+			<li class="description__list-item">ie9+</li>
+			<li class="description__list-item">not responsive: doesn't work with %, min-max</li>
+			<li class="description__list-item">must use border-box for paddings or compensate them</li>
+		</ul>
+	</div>
 </div>

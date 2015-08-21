@@ -1,4 +1,9 @@
 <style>
+	body {
+		position: relative;
+		font-family: Arial, sans-serif;
+	}
+
 	.viewport {
 		height: 100%;
 		background: lightcoral;
@@ -12,9 +17,65 @@
 		display: inline-block;
 		position: relative;
 		top: calc(50% - 150px); /* height/2 */
+		text-align: left;
+	}
+
+	code {
+		font-size: 20px;
+		position: absolute;
+	}
+
+	.popup code {
+		position: relative;
+	}
+
+	.description {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 300px;
+		color: #fff;
+		font-size: 20px;
+	}
+
+	.description__item {
+		margin-bottom: 20px;
+	}
+
+	.description__title {
+		font-weight: bold;
+		text-decoration: underline;
 	}
 </style>
 
 <div class="viewport">
-	<div class="popup">111</div>
+	<code>
+		position: relative;<br>
+		text-align: center;<br>
+	</code>
+	<div class="popup">
+		<code>
+			display: inline-block;<br>
+			position: relative;<br>
+			top: calc(50% - @height/2);<br>
+		</code>
+	</div>
+</div>
+
+<div class="description">
+	<div class="description__item description__item_type_adv">
+		<div class="description__title">Advantages:</div>
+		<ul class="description__list">
+			<li class="description__list-item">minimal code</li>
+
+		</ul>
+	</div>
+	<div class="description__item description__item_type_cav">
+		<div class="description__title">Caveats:</div>
+		<ul class="description__list">
+			<li class="description__list-item">ie9+</li>
+			<li class="description__list-item">height must be declared, % and min-max doesn't work</li>
+			<li class="description__list-item">must use border-box for paddings or compensate them (height)</li>
+		</ul>
+	</div>
 </div>

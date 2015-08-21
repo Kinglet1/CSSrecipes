@@ -1,4 +1,9 @@
 <style>
+	body {
+		position: relative;
+		font-family: Arial, sans-serif;
+	}
+
 	.viewport {
 		height: 100%;
 		background: lightsalmon;
@@ -16,10 +21,54 @@
 		background: lavenderblush;
 		display: inline-block;
 	}
+
+	code {
+		font-size: 20px;
+	}
+
+	.description {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 300px;
+		color: #fff;
+		font-size: 20px;
+	}
+
+	.description__item {
+		margin-bottom: 20px;
+	}
+
+	.description__title {
+		font-weight: bold;
+		text-decoration: underline;
+	}
 </style>
 
 <div class="viewport">
 	<button>
-		<div class="popup">111</div>
+		<span class="popup">
+			<code>
+				display: inline-block;
+			</code>
+		</span>
 	</button>
+</div>
+
+<div class="description">
+	<div class="description__item description__item_type_adv">
+		<div class="description__title">Advantages:</div>
+		<ul class="description__list">
+			<li class="description__list-item">ie7+</li>
+			<li class="description__list-item">minimal code</li>
+			<li class="description__list-item">responsive: %, min-max width & height, resizable popup</li>
+			<li class="description__list-item">no need of box-sizing for paddings</li>
+		</ul>
+	</div>
+	<div class="description__item description__item_type_cav">
+		<div class="description__title">Caveats:</div>
+		<ul class="description__list">
+			<li class="description__list-item">nesting in button</li>
+		</ul>
+	</div>
 </div>

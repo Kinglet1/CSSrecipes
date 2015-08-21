@@ -1,4 +1,9 @@
 <style>
+	body {
+		position: relative;
+		font-family: Arial, sans-serif;
+	}
+
 	.viewport {
 		height: 100%;
 		background: lightsalmon;
@@ -6,6 +11,8 @@
 
 	.popup {
 		background: lavenderblush;
+		font-size: 20px;
+		padding: 20px;
 	}
 
 	table {
@@ -15,17 +22,63 @@
 
 	.col_position_aside {
 		width: 50%;
+		text-align: center;
+		border: 1px solid red;
+	}
+
+	code {
+		font-size: 20px;
+	}
+
+	.description {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 300px;
+		color: #fff;
+		font-size: 20px;
+	}
+
+	.description__item {
+		margin-bottom: 20px;
+	}
+
+	.description__title {
+		font-weight: bold;
+		text-decoration: underline;
 	}
 </style>
 
 <div class="viewport">
 	<table>
 		<tr>
-			<td class="col_position_aside"></td>
-			<td>
-				<div class="popup">111</div>
+			<td class="col_position_aside">
+				<code>width: 50%</code>
 			</td>
-			<td class="col_position_aside"></td>
+			<td>
+				<div class="popup">I am popup!</div>
+			</td>
+			<td class="col_position_aside">
+				<code>width: 50%</code>
+			</td>
 		</tr>
 	</table>
+</div>
+
+
+<div class="description">
+	<div class="description__item description__item_type_adv">
+		<div class="description__title">Advantages:</div>
+		<ul class="description__list">
+			<li class="description__list-item">ie7+</li>
+			<li class="description__list-item">responsive: %, min-max width & height, resizable popup</li>
+			<li class="description__list-item">no need of box-sizing for paddings</li>
+		</ul>
+	</div>
+	<div class="description__item description__item_type_cav">
+		<div class="description__title">Caveats:</div>
+		<ul class="description__list">
+			<li class="description__list-item">tables</li>
+		</ul>
+	</div>
 </div>
