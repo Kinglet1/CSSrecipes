@@ -1,0 +1,149 @@
+<style>
+	table {
+		margin: 0;
+		padding: 0;
+		border-collapse: collapse;
+	}
+
+	td, th {
+		border: 1px solid #e4e4e4;
+		padding: 20px;
+	}
+
+	table {
+		overflow: hidden;
+	}
+
+	tr:hover {
+		background: blue;
+	}
+
+	td, th {
+		position: relative;
+	}
+
+	td:before,
+	th:before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 10000px;
+		left: 0;
+		top: -5000px; /* -(@height/2) */
+		z-index: -1;
+		background: transparent;
+	}
+
+	td:hover:before,
+	th:hover:before {
+		background: orange;
+	}
+
+	td:hover {
+		background: green;
+	}
+
+	.description {
+		font-size: 20px;
+		margin-top: 40px;
+	}
+
+	table, code {
+		float: left;
+		margin-right: 40px;
+	}
+
+	.example1, .example2 {
+		overflow: hidden;
+		margin-bottom: 40px;
+	}
+
+	.example1 tr:nth-child(even) {
+		background: pink;
+	}
+
+	.example2 tr:nth-child(even) td:after {
+		content: '';
+		height: 100%;
+		width: 10000px;
+		top: 0;
+		left: -5000px;
+		position: absolute;
+		background: pink;
+		z-index: -2;
+	}
+</style>
+
+
+<div class="example1">
+	<table>
+		<tr>
+			<th>Номер рейса</th>
+			<th>Время вылета</th>
+			<th>Пункт назначения</th>
+		</tr>
+		<tr>
+			<td>123</td>
+			<td>22.50</td>
+			<td>Лондон</td>
+		</tr>
+		<tr>
+			<td>456</td>
+			<td>23.00</td>
+			<td>Амстердам</td>
+		</tr>
+		<tr>
+			<td>789</td>
+			<td>05.55</td>
+			<td>Париж</td>
+		</tr>
+	</table>
+
+	<div class="description">
+		<code>
+			tr:nth-child(even) {<br>
+			background: pink;<br>
+			}<br>
+		</code>
+	</div>
+</div>
+
+<div class="example2">
+	<table>
+		<tr>
+			<th>Номер рейса</th>
+			<th>Время вылета</th>
+			<th>Пункт назначения</th>
+		</tr>
+		<tr>
+			<td>123</td>
+			<td>22.50</td>
+			<td>Лондон</td>
+		</tr>
+		<tr>
+			<td>456</td>
+			<td>23.00</td>
+			<td>Амстердам</td>
+		</tr>
+		<tr>
+			<td>789</td>
+			<td>05.55</td>
+			<td>Париж</td>
+		</tr>
+	</table>
+
+	<div class="description">
+		<code>
+			tr:nth-child(even) td:after {<br>
+			content: '';<br>
+			height: 100%;<br>
+			width: 10000px;<br>
+			top: 0;<br>
+			left: -5000px;<br>
+			position: absolute;<br>
+			background: pink;<br>
+			z-index: -2;<br>
+			}
+		</code>
+	</div>
+</div>

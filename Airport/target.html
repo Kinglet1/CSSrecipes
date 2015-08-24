@@ -1,0 +1,72 @@
+<style>
+	.popup {
+		padding: 20px;
+		display: none;
+		margin-top: 40px;
+		width: 300px;
+		height: 300px;
+		position: relative;
+	}
+
+	.button {
+		display: inline-block;
+		padding: 5px 20px;
+	}
+
+	.button_color_orange, .popup_color_orange {
+		background: orange;
+	}
+
+	.button_color_pink, .popup_color_pink {
+		background: pink;
+	}
+
+	.button_color_lightblue, .popup_color_lightblue {
+		background: lightblue;
+	}
+
+	.popup:target {
+		display: block;
+	}
+
+	.description {
+		font-size: 20px;
+		margin-top: 40px;
+	}
+
+	.close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 20px;
+	}
+</style>
+
+<a href="#popup1" class="button button_color_orange">Show popup1</a>
+<a href="#popup2" class="button button_color_pink">Show popup2</a>
+<a href="#popup3" class="button button_color_lightblue">Show popup3</a>
+
+<div class="popup popup_color_orange" id="popup1">
+	I am popup1
+	<a href="#close" class="close">Close</a>
+</div>
+<div class="popup popup_color_pink" id="popup2">
+	I am popup2
+	<a href="#close" class="close">Close</a>
+</div>
+<div class="popup popup_color_lightblue" id="popup3">
+	I am popup3
+	<a href="#close" class="close">Close</a>
+</div>
+
+<div class="description">
+	<code>
+		.popup {<br>
+		display: none;<br>
+		}<br>
+		<p></p>
+		.popup:target {<br>
+		display: block;<br>
+		}<br>
+	</code>
+</div>

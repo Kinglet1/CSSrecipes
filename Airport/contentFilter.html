@@ -1,0 +1,69 @@
+<style>
+	table {
+		margin: 0;
+		padding: 0;
+		border-collapse: collapse;
+	}
+
+	td {
+		border-bottom: 1px solid #666;
+		padding: 20px;
+	}
+
+	#out:checked ~ table .in {
+		display: none;
+	}
+
+	#in:checked ~ table .out {
+		display: none;
+	}
+
+	.in {
+		color: #299e05;
+	}
+
+	.out {
+		color: orange;
+	}
+
+
+	.description {
+		font-size: 20px;
+		margin-top: 40px;
+	}
+</style>
+
+Все<input type="radio" name="content-filter" id="all" checked>
+<span class="out">Вылет</span><input type="radio" name="content-filter" id="out">
+<span class="in">Прилет</span><input type="radio" name="content-filter" id="in">
+
+<table>
+	<tr class="in">
+		<td>Прилет</td>
+		<td>12.45</td>
+		<td>Париж</td>
+	</tr>
+	<tr class="out">
+		<td>Вылет</td>
+		<td>15.30</td>
+		<td>Лондон</td>
+	</tr>
+	<tr class="in">
+		<td>Прилет</td>
+		<td>14.00</td>
+		<td>Мадрид</td>
+	</tr>
+	<tr class="out">
+		<td>Вылет</td>
+		<td>23.20</td>
+		<td>Урюпинск</td>
+	</tr>
+</table>
+
+<div class="description">
+	<code>
+		#out:checked ~ table .in { display none }
+		<br>
+		#in:checked ~ table .out { display none }
+	</code>
+</div>

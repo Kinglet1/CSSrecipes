@@ -1,0 +1,115 @@
+<style>
+	table {
+		margin: 0;
+		padding: 0;
+		border-collapse: collapse;
+	}
+
+	td, th {
+		border: 1px solid #e4e4e4;
+		padding: 20px;
+	}
+
+	table {
+		overflow: hidden;
+	}
+
+	tr:hover {
+		background: blue;
+	}
+
+	td, th {
+		position: relative;
+	}
+
+	td:before,
+	th:before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 10000px;
+		left: 0;
+		top: -5000px; /* -(@height/2) */
+		z-index: -1;
+		background: transparent;
+	}
+
+	td:hover:before,
+	th:hover:before {
+		background: orange;
+	}
+
+	td:hover {
+		background: green;
+	}
+
+	.description {
+		font-size: 20px;
+		margin-top: 40px;
+	}
+
+	table, code {
+		float: left;
+		margin-right: 40px;
+	}
+</style>
+
+<table>
+	<tr>
+		<th>Номер рейса</th>
+		<th>Время вылета</th>
+		<th>Пункт назначения</th>
+	</tr>
+	<tr>
+		<td>123</td>
+		<td>22.50</td>
+		<td>Лондон</td>
+	</tr>
+	<tr>
+		<td>456</td>
+		<td>23.00</td>
+		<td>Амстердам</td>
+	</tr>
+	<tr>
+		<td>789</td>
+		<td>05.55</td>
+		<td>Париж</td>
+	</tr>
+</table>
+
+<div class="description">
+	<code>
+		table {<br>
+		overflow: hidden;<br>
+		}<br>
+		<p></p>
+		tr:hover {<br>
+		background: blue;<br>
+		}<br>
+		<p></p>
+		td, th {<br>
+		position: relative;<br>
+		}<br>
+		<p></p>
+		td:before,<br>
+		th:before {<br>
+		position: absolute;<br>
+		content: '';<br>
+		width: 100%;<br>
+		height: 10000px;<br>
+		left: 0;<br>
+		top: -(@height/2);<br>
+		z-index: -1;<br>
+		background: transparent;<br>
+		}<br>
+		<p></p>
+		td:hover:before,<br>
+		th:hover:before {<br>
+		background: orange;<br>
+		}<br>
+		<p></p>
+		td:hover {<br>
+		background: green;<br>
+		}
+	</code>
+</div>

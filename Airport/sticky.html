@@ -1,0 +1,43 @@
+<style>
+	.viewport {
+		height: 5000px;
+		background: salmon;
+		position: relative;
+	}
+
+	.page-title {
+		text-align: center;
+		text-transform: uppercase;
+		padding: 20px;
+		background: lightyellow;
+		font-size: 30px;
+		font-family: Arial, sans-serif;
+	}
+
+	.sticky {
+		width: 300px;
+		height: 300px;
+		margin: 0 auto;
+		background: lightblue;
+		top: 0;
+		position: -webkit-sticky;
+		position: sticky;
+	}
+
+	code {
+		font-size: 18px;
+		margin-top: 40px;
+	}
+</style>
+
+<div class="viewport">
+	<h1 class="page-title">Page title</h1>
+	<div class="sticky">
+		<p>I am sticky div</p>
+		<code>
+			top: 0;<br>
+			position: -webkit-sticky;<br>
+			position: sticky;<br>
+		</code>
+	</div>
+</div>
