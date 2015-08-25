@@ -1,0 +1,30 @@
+body {
+	font: normal 13px Arial, sans-serif;
+	line-height: 18px;
+	color: #333;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+a,
+.pseudo-link {
+	text-decoration: none;
+	color: #039;
+}
+
+a:hover,
+.pseudo-link:hover {
+	text-decoration: underline;
+}
+
+.pseudo-link {
+	cursor: pointer;
+}

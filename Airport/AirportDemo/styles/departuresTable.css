@@ -1,0 +1,167 @@
+.departures-table {
+	width: 100%;
+	overflow: hidden;
+	table-layout: fixed;
+	margin-top: 20px;
+}
+
+.departures-table__cell {
+	padding: 20px;
+	border-bottom: 1px solid #e4e4e4;
+	position: relative;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.departures-table__row:hover {
+	background: #e0f7fa;
+}
+
+.departures-table__row_type_header:hover {
+	background: #CFD8DC;
+}
+
+.departures-table__cell:before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100000px;
+	left: 0;
+	top: -50000px;
+	background: transparent;
+	z-index: -1;
+}
+
+.departures-table__cell:hover:before {
+	background: #FFF9C4;
+}
+
+.departures-table__cell:hover {
+	background: #CCFF90;
+}
+
+.departures-table__row:nth-child(odd) .departures-table__cell:after {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #fafafa;
+	z-index: -2;
+}
+
+.departures-table__row_type_header .departures-table__cell:after {
+	background: #CFD8DC !important;
+}
+
+.departures-table__row_type_header {
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	top: 0;
+}
+
+.departures-table__popup-link {
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	background: #2196F3;
+	padding: 0 15px;
+	border-radius: 10px/7px;
+	color: #fff;
+	font-size: 15px;
+	white-space: nowrap;
+}
+
+.departures-table__popup-link:hover {
+	text-decoration: none;
+	background: #42A5F5;
+}
+
+.departures-table__cell_name_button {
+	text-align: center;
+}
+
+.departures-table__company-name,
+.departures-table__company-logo {
+	vertical-align: middle;
+}
+
+.departures-table__company-name {
+	margin-right: 20px;
+}
+
+.departures-table__row_flight-type_out .departures-table__cell_name_flight-type {
+	color: orangered;
+}
+
+.departures-table__row_flight-type_in .departures-table__cell_name_flight-type {
+	color: #7878F9;
+}
+
+
+
+
+
+
+
+.departures-table__cell {
+	font-size: 13px;
+}
+
+.departures-table__row_type_header .departures-table__cell {
+	font-size: 15px;
+}
+
+.departures-table__cell_name_additional-info {
+	display: none;
+}
+
+.departures-table__cell_name_plane .departures-table__cell-text_full_yes {
+	display: none;
+}
+	
+.departures-table__company-name {
+	display: none;
+}
+
+.departures-table__cell_name_company {
+	text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+	.departures-table__cell_name_plane .departures-table__cell-text_full_yes {
+		display: inline;
+	}
+
+	.departures-table__cell_name_plane .departures-table__cell-text_shortened_yes {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.departures-table__cell_name_company {
+		text-align: left;
+	}
+
+	.departures-table__company-name {
+		display: inline;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.departures-table__cell_name_additional-info {
+		display: table-cell;
+	}
+
+	.departures-table__cell {
+		font-size: 15px;
+	}
+
+	.departures-table__row_type_header .departures-table__cell {
+		font-size: 18px;
+	}
+}

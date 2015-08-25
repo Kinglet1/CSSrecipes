@@ -1,0 +1,21 @@
+.info-table__cell {
+	padding: 10px;
+	text-align: left;
+	color: #666;
+}
+
+.info-table__cell:first-child {
+	color: #333;
+}
+
+.info-table__row {
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.info-table__row:last-child {
+	border: none;
+}
+
+.info-table__header {
+	background: #e0f7fa;
+}

@@ -1,0 +1,11 @@
+.content-filter {
+	margin: 0 10px 0 5px;
+}
+
+#out:checked ~ .departures-table .departures-table__row_flight-type_in {
+	display: none;
+}
+
+#in:checked ~ .departures-table .departures-table__row_flight-type_out {
+	display: none;
+}

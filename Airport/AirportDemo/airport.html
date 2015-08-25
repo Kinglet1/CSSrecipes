@@ -1,0 +1,295 @@
+<link rel="stylesheet" href="styles/reset.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/departuresTable.css">
+<link rel="stylesheet" href="styles/pageHeader.css">
+<link rel="stylesheet" href="styles/contentFilter.css">
+<link rel="stylesheet" href="styles/popup.css">
+<link rel="stylesheet" href="styles/info-table.css">
+
+<div class="pagewrap" style="padding: 20px">
+
+<div class="page-header">
+	<h1 class="page-header__title-text">Departures</h1>
+	<div class="page-header__date">26.08.2015</div>
+</div>
+
+All<input class="content-filter" type="radio" name="content-filter" id="all" checked>
+Departures<input class="content-filter" type="radio" name="content-filter" id="out">
+Arrivals<input class="content-filter" type="radio" name="content-filter" id="in">
+
+<table class="departures-table">
+	<tr class="departures-table__row departures-table__row_type_header">
+		<th class="departures-table__cell departures-table__cell_type_header departures-table__cell_name_flight-type"><span class="departures-table__cell-text">Flight type</span></th>
+		<th class="departures-table__cell departures-table__cell_type_header departures-table__cell_name_flight-number"><span class="departures-table__cell-text">Flight number</span></th>
+		<th class="departures-table__cell departures-table__cell_type_header departures-table__cell_name_company"><span class="departures-table__cell-text">Company</span></th>
+		<th class="departures-table__cell departures-table__cell_type_header departures-table__cell_name_plane"><span class="departures-table__cell-text">Plane</span></th>
+		<th class="departures-table__cell departures-table__cell_type_header departures-table__cell_name_destination"><span class="departures-table__cell-text">Destination</span></th>
+		<th class="departures-table__cell departures-table__cell_type_header departures-table__cell_name_departure-time"><span class="departures-table__cell-text">Departure/arrival time</span></th>
+		<th class="departures-table__cell departures-table__cell_type_header departures-table__cell_name_status"><span class="departures-table__cell-text">Status</span></th>
+		<th class="departures-table__cell departures-table__cell_type_header departures-table__cell_name_additional-info"><span class="departures-table__cell-text">Additional info</span></th>
+		<th class="departures-table__cell departures-table__cell_type_header"></th>
+	</tr>
+
+	<tr class="departures-table__row departures-table__row_flight-type_in">
+		<td class="departures-table__cell departures-table__cell_name_flight-type"><span class="departures-table__cell-text">Arrival</span></td>
+		<td class="departures-table__cell departures-table__cell_name_flight-number"><span class="departures-table__cell-text">1234</span></td>
+		<td class="departures-table__cell departures-table__cell_name_company">
+			<span class="departures-table__cell-text">
+				<span class="departures-table__company-name">Aeroflot</span>
+				<img src="images/airport1.png" alt="" class="departures-table__company-logo" width="50" height="50">
+			</span>
+		</td>
+		<td class="departures-table__cell departures-table__cell_name_plane">
+			<span class="departures-table__cell-text departures-table__cell-text_full_yes">
+				Boeing 787
+			</span>
+			<span class="departures-table__cell-text departures-table__cell-text_shortened_yes">
+				B 787
+			</span>
+		</td>
+		<td class="departures-table__cell departures-table__cell_name_destination"><span class="departures-table__cell-text">Krasnoyarsk</span></td>
+		<td class="departures-table__cell departures-table__cell_name_departure-time"><span class="departures-table__cell-text">23.00</span></td>
+		<td class="departures-table__cell departures-table__cell_name_status"><span class="departures-table__cell-text">landed</span></td>
+		<td class="departures-table__cell departures-table__cell_name_additional-info"><span class="departures-table__cell-text">Some info about flight status</span></td>
+		<td class="departures-table__cell departures-table__cell_name_button">
+			<a href="#row-popup1" class="departures-table__popup-link">Show info</a>
+		</td>
+	</tr>
+	<tr class="departures-table__row departures-table__row_flight-type_out">
+		<td class="departures-table__cell departures-table__cell_name_flight-type"><span class="departures-table__cell-text">Departure</span></td>
+		<td class="departures-table__cell departures-table__cell_name_flight-number"><span class="departures-table__cell-text">5678</span></td>
+		<td class="departures-table__cell departures-table__cell_name_company">
+			<span class="departures-table__cell-text">
+				<span class="departures-table__company-name">Transaero</span>
+				<img src="images/airport2.png" alt="" class="departures-table__company-logo" width="50" height="50">
+			</span>
+		</td>
+		<td class="departures-table__cell departures-table__cell_name_plane">
+			<span class="departures-table__cell-text departures-table__cell-text_full_yes">
+				Antonov An-158
+			</span>
+			<span class="departures-table__cell-text departures-table__cell-text_shortened_yes">
+				An-158
+			</span>
+		</td>
+		<td class="departures-table__cell departures-table__cell_name_destination"><span class="departures-table__cell-text">St. Petersburg</span></td>
+		<td class="departures-table__cell departures-table__cell_name_departure-time"><span class="departures-table__cell-text">01.05</span></td>
+		<td class="departures-table__cell departures-table__cell_name_status"><span class="departures-table__cell-text">departured</span></td>
+		<td class="departures-table__cell departures-table__cell_name_additional-info"><span class="departures-table__cell-text">Some more information about flight status</span></td>
+		<td class="departures-table__cell departures-table__cell_name_button">
+			<a href="#row-popup2" class="departures-table__popup-link">Show info</a>
+		</td>
+	</tr>
+	<tr class="departures-table__row departures-table__row_flight-type_in">
+		<td class="departures-table__cell departures-table__cell_name_flight-type"><span class="departures-table__cell-text">Arrival</span></td>
+		<td class="departures-table__cell departures-table__cell_name_flight-number"><span class="departures-table__cell-text">9101</span></td>
+		<td class="departures-table__cell departures-table__cell_name_company">
+			<span class="departures-table__cell-text">
+				<span class="departures-table__company-name">Luftgansa</span>
+				<img src="images/airport3.jpeg" alt="" class="departures-table__company-logo" width="50" height="50">
+			</span>
+		</td>
+		<td class="departures-table__cell departures-table__cell_name_plane">
+			<span class="departures-table__cell-text departures-table__cell-text_full_yes">
+				Boeing 747
+			</span>
+			<span class="departures-table__cell-text departures-table__cell-text_shortened_yes">
+				B 747
+			</span>
+		</td>
+		<td class="departures-table__cell departures-table__cell_name_destination"><span class="departures-table__cell-text">Berlin</span></td>
+		<td class="departures-table__cell departures-table__cell_name_departure-time"><span class="departures-table__cell-text">11.20</span></td>
+		<td class="departures-table__cell departures-table__cell_name_status"><span class="departures-table__cell-text">departured</span></td>
+		<td class="departures-table__cell departures-table__cell_name_additional-info"><span class="departures-table__cell-text">There is no info about flight. Just dance</span></td>
+		<td class="departures-table__cell departures-table__cell_name_button">
+			<a href="#row-popup3" class="departures-table__popup-link">Show info</a>
+		</td>
+	</tr>
+	<tr class="departures-table__row departures-table__row_flight-type_in">
+		<td class="departures-table__cell departures-table__cell_name_flight-type"><span class="departures-table__cell-text">Arrival</span></td>
+		<td class="departures-table__cell departures-table__cell_name_flight-number"><span class="departures-table__cell-text">1145</span></td>
+		<td class="departures-table__cell departures-table__cell_name_company">
+			<span class="departures-table__cell-text">
+				<span class="departures-table__company-name">Airfrance</span>
+				<img src="images/airport44.png" alt="" class="departures-table__company-logo" width="50" height="50">
+			</span>
+		</td>
+		<td class="departures-table__cell departures-table__cell_name_plane">
+			<span class="departures-table__cell-text departures-table__cell-text_full_yes">
+				Airbus A350
+			</span>
+			<span class="departures-table__cell-text departures-table__cell-text_shortened_yes">
+				A350
+			</span>
+		</td>
+		<td class="departures-table__cell departures-table__cell_name_destination"><span class="departures-table__cell-text">Paris</span></td>
+		<td class="departures-table__cell departures-table__cell_name_departure-time"><span class="departures-table__cell-text">12.00</span></td>
+		<td class="departures-table__cell departures-table__cell_name_status"><span class="departures-table__cell-text">landed</span></td>
+		<td class="departures-table__cell departures-table__cell_name_additional-info"><span class="departures-table__cell-text">Hei naranai naranai</span></td>
+		<td class="departures-table__cell departures-table__cell_name_button">
+			<a href="#row-popup4" class="departures-table__popup-link">Show info</a>
+		</td>
+	</tr>
+</table>
+
+
+<div class="popup" id="row-popup1">
+	<div class="popup__inner">
+		<table class="info-table">
+			<colgroup class="info-table__header"></colgroup>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Flight type</td>
+				<td class="info-table__cell">Arrival</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Flight number</td>
+				<td class="info-table__cell">1234</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Company</td>
+				<td class="info-table__cell">Aeroflot</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Plane</td>
+				<td class="info-table__cell">Boeing 747</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Destination</td>
+				<td class="info-table__cell">Krasnoyarsk</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Departure/arrival time</td>
+				<td class="info-table__cell">23.00</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Status</td>
+				<td class="info-table__cell">landed</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Additional info</td>
+				<td class="info-table__cell">Some info about flight status</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="popup" id="row-popup2">
+	<div class="popup__inner">
+		<table class="info-table">
+			<colgroup class="info-table__header"></colgroup>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Flight type</td>
+				<td class="info-table__cell">Departure</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Flight number</td>
+				<td class="info-table__cell">5678</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Company</td>
+				<td class="info-table__cell">Transaero</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Plane</td>
+				<td class="info-table__cell">Antonov An-158</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Destination</td>
+				<td class="info-table__cell">St. Petersburg</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Departure/arrival time</td>
+				<td class="info-table__cell">01.05</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Status</td>
+				<td class="info-table__cell">departurd</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Additional info</td>
+				<td class="info-table__cell">Some more information about flight status</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="popup" id="row-popup3">
+	<div class="popup__inner">
+		<table class="info-table">
+			<colgroup class="info-table__header"></colgroup>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Flight type</td>
+				<td class="info-table__cell">Arrival</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Flight number</td>
+				<td class="info-table__cell">9101</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Company</td>
+				<td class="info-table__cell">Luftgansa</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Plane</td>
+				<td class="info-table__cell">Boeing 747</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Destination</td>
+				<td class="info-table__cell">Berlin</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Departure/arrival time</td>
+				<td class="info-table__cell">11.20</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Status</td>
+				<td class="info-table__cell">departured</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Additional info</td>
+				<td class="info-table__cell">There is no info about flight. Just dance</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="popup" id="row-popup4">
+	<div class="popup__inner">
+		<table class="info-table">
+			<colgroup class="info-table__header"></colgroup>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Flight type</td>
+				<td class="info-table__cell">Arrival</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Flight number</td>
+				<td class="info-table__cell">1145</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Company</td>
+				<td class="info-table__cell">Airfrance</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Plane</td>
+				<td class="info-table__cell">Airbus A350</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Destination</td>
+				<td class="info-table__cell">Paris</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Departure/arrival time</td>
+				<td class="info-table__cell">12.00</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Status</td>
+				<td class="info-table__cell">landed</td>
+			</tr>
+			<tr class="info-table__row">
+				<td class="info-table__cell">Additional info</td>
+				<td class="info-table__cell">Hei naranai naranai</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<a href="#close" class="popup-close-button">&times;</a>
+<div class="popup-wrapper"></div>
+
+</div>
