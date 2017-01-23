@@ -59,15 +59,6 @@
 	}
 </style>
 
-<script src="../jquery/jquery-1.10.2.min.js"></script>
-<script>
-	$(document).bind('keydown', function() {
-		if (event.keyCode == 13) {
-			$('.description__item_visible_no:first').removeClass('description__item_visible_no');
-		}
-	});
-</script>
-
 <div class="viewport">
 	<div class="popup-wrapper-wrapper">
 		<div class="popup-wrapper">
@@ -101,7 +92,7 @@
 </div>
 
 <div class="description">
-	<div class="description__item description__item_visible_no description__item_type_adv">
+	<div class="description__item description__item_type_adv">
 		<div class="description__title">Advantages:</div>
 		<ul class="description__list">
 			<li class="description__list-item">ie8+</li>
@@ -109,7 +100,7 @@
 			<li class="description__list-item">no need of box-sizing for paddings</li>
 		</ul>
 	</div>
-	<div class="description__item description__item_visible_no description__item_type_cav">
+	<div class="description__item description__item_type_cav">
 		<div class="description__title">Caveats:</div>
 		<ul class="description__list">
 			<li class="description__list-item">tables</li>
